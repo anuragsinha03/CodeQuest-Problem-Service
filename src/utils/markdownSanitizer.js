@@ -7,17 +7,14 @@ function sanitizeMarkdownContent(markdownContent) {
 
 	//1. convert markdown to html
 	const convertedHtml = marked.parse(markdownContent);
-	console.log("Converted html: ", convertedHtml);
 
 	//2. Sanitize HTML
 	const sanitizedHtml = sanitizeHtmlLibrary(convertedHtml, {
-		allowedTags: sanitizeHtmlLibrary.defaults.allowedTags, // <script> is not in the list of default allowed tags, you can add it manually if you dont want script tag to be removed
+		allowedTags: sanitizeHtmlLibrary.defaults.allowedTags.concat(["img"]), // <script> is not in the list of default allowed tags, you can add it manually if you dont want script tag to be removed
 	});
-	console.log("Sanitized Html: ", sanitizedHtml);
 
 	//3. Convert this sanitized html back to markdown to get sanitized markdown
 	const sanitizedMarkdown = turndownSerivce.turndown(sanitizedHtml);
-	console.log("Sanitized markdown: ", sanitizedMarkdown);
 	return sanitizedMarkdown;
 }
 
