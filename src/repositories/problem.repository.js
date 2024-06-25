@@ -2,6 +2,7 @@ const { default: mongoose } = require("mongoose");
 const NotFound = require("../errors/notfound.error");
 const { Problem } = require("../models/index");
 const InvalidResourceID = require("../errors/invalidresourceid.error");
+const logger = require("../config/logger.config");
 
 class ProblemRepository {
 	async createProblem(problemData) {
@@ -36,6 +37,9 @@ class ProblemRepository {
 			}
 			const problem = await Problem.findById(id);
 			if (!problem) {
+				logger.error(
+					`Problem.Repository: [getProblem] - Problem with ID: ${id} not found in the DB.`
+				);
 				throw new NotFound("Problem", id);
 			}
 			return problem;
@@ -52,6 +56,9 @@ class ProblemRepository {
 			}
 			const deletedProblem = await Problem.findByIdAndDelete(id);
 			if (!deletedProblem) {
+				logger.error(
+					`Problem.Repository: [deleteProblem] - Problem with ID: ${id} not found in the DB.`
+				);
 				throw new NotFound("Problem", id);
 			}
 			return deletedProblem;
@@ -75,6 +82,9 @@ class ProblemRepository {
 			);
 
 			if (!updatedProblem) {
+				logger.error(
+					`Problem.Repository: [updateProblem] - Problem with ID: ${id} not found in the DB.`
+				);
 				throw new NotFound("Problem", id);
 			}
 

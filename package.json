@@ -16,6 +16,8 @@
 		"marked": "^13.0.1",
 		"mongoose": "^8.4.3",
 		"sanitize-html": "^2.13.0",
-		"turndown": "^7.2.0"
+		"turndown": "^7.2.0",
+		"winston": "^3.13.0",
+		"winston-mongodb": "^5.1.1"
 	}
 }
