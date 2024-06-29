@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "npx nodemon src/index.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "jest --detectOpenHandles"
 	},
 	"author": "Anurag Sinha",
 	"license": "ISC",
@@ -13,6 +13,7 @@
 		"dotenv": "^16.4.5",
 		"express": "^4.19.2",
 		"http-status-codes": "^2.3.0",
+		"jest": "^29.7.0",
 		"marked": "^13.0.1",
 		"mongoose": "^8.4.3",
 		"sanitize-html": "^2.13.0",
