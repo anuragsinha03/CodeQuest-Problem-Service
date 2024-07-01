@@ -48,7 +48,7 @@ Our project utilizes a multi-layered architecture to efficiently manage client r
     - The response flows back through the layers in the reverse order: from the repository layer to the service layer, then to the controller layer, and finally to the client.
 
 - Architectural Flow:
-    - Client → Router → Controller → Service → Repository
+    ![Multi-Layer Flow](/multilayer-flow.png)
 
 ## Benefits of Layered Architecture
  - Separation of Concerns: Each layer has a specific responsibility, making the codebase easier to manage and understand.
