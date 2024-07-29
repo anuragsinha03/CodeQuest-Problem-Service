@@ -2,7 +2,7 @@
 --------------------------------------------
 
 This microservice handles addition of problems and testcases along with solutions
-for algocode platform.
+for codequest platform.
 
 To set up the project on your local machine do the following steps:
 
