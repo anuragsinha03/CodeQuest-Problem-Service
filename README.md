@@ -1,5 +1,6 @@
-# CodeQuest Problem Service
+# CodeQuest Problem Service - (CodeQuest)
 --------------------------------------------
+![CodeQuest-HLD](/diagrams/CodeQuest-HLD.jpeg)
 
 This microservice handles addition of problems and testcases along with solutions
 for codequest platform.
