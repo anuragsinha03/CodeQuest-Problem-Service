@@ -1,0 +1,4 @@
+PORT = 3001
+ATLAS_DB_URL = "<<LINK GOES HERE>>"
+LOG_DB_URL = "<<LINK GOES HERE>>"
+NODE_ENV = "development"
