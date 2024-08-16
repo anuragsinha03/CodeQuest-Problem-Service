@@ -1,6 +1,7 @@
 # CodeQuest Problem Service - (CodeQuest)
 --------------------------------------------
-![CodeQuest-HLD](/diagrams/CodeQuest-HLD.jpeg)
+![CodeQuest-HLD](/diagrams/HighLevelDesign.JPG)
+![CodeQuest-WorkFlow](/diagrams/WorkFlow.JPG)
 
 This microservice handles addition of problems and testcases along with solutions
 for codequest platform.
