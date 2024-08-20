@@ -14,7 +14,7 @@ app.use("/api", apiRouter);
 
 app.get("/ping", (req, res) => {
 	return res.json({
-		message: "Problem Service is alive",
+		message: "WELCOME TO CODEQUEST, the Problem Service is alive",
 	});
 });
 
